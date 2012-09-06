@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  task_desc: MyString
+  est_time: 2012-09-05 20:13:13
+  act_time: 2012-09-05 20:13:13
+
+two:
+  name: MyString
+  task_desc: MyString
+  est_time: 2012-09-05 20:13:13
+  act_time: 2012-09-05 20:13:13

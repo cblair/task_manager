@@ -1,0 +1,23 @@
+Tasks
+*name
+*desc
+*estimated hours
+*actual hours
+*future - assigned to
+*future - assigned by
+*Task Category
+
+TaskCategory
+*name
+*future - owner
+
+Specification
+*desc
+*requirements
+
+Requirement
+*desc
+*tests
+
+Test
+*desc

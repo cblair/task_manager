@@ -1,6 +1,12 @@
 TaskManager::Application.routes.draw do
-  resources :tasks
+  resources :homes
 
+  devise_for :users
+
+  resources :tasks
+  
+  root :to => "homes#index"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

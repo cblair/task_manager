@@ -21,3 +21,6 @@ Requirement
 
 Test
 *desc
+
+TODO Heroku
+*config/application.rb - see Heroku notes 

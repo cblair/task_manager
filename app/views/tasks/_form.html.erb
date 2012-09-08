@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.select("priority", 1..5) %>
+  </div>
+  <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>

@@ -7,11 +7,63 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <div class="page-header">
+    <h1 class="brand">TaskManager</h1>
+    <p></p>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container" style="width: auto;">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li><%= link_to "Home", root_path %></li>
+            <li class="divider-vertical"></li>
+            <li><%= link_to "Tasks", tasks_path %></li>
+            <li class="divider-vertical"></li>
+            <li><%=
+            		if user_signed_in?
+	            		link_to "sign out", destroy_user_session_path,
+	            				:method => :delete
+	            	else
+	            		link_to "sign in", new_user_session_path
+	            	end
+            	
+            	%></li>
+            <li class="divider-vertical"></li>
+          </ul>
+          <ul class="nav pull-right">
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div><!-- /navbar-inner -->
+  </div><!-- /navbar -->
+</div>
 
-<%= yield %>
+<div class="container well" style="background-color: #dfdfdf;">
+    <% if notice || alert %>
+        <%= javascript_include_tag "bootstrap-alert" %>
+    <% end %>
+    <% if notice %>
+    <div id="notice" class="alert alert-info"">
+        <a class="close" data-dismiss="alert" href="#">&times;</a>
+        <%= notice %>
+    </div>
+    <% end %>
+    <% if alert %>
+    <div id="alert" class="alert">
+        <a class="close" data-dismiss="alert" href="#">&times;</a>
+        <%= alert %>
+    </div>
+    <% end %>
+
+	<div class="well" style="background-color: #f5f5f5;">
+	<%= yield %>
+	</div>
+</div>
 
 </body>
 </html>

@@ -11,16 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120907232338) do
+ActiveRecord::Schema.define(:version => 20120911022153) do
+
+  create_table "homes", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "tasks", :force => true do |t|
     t.string   "name"
     t.string   "task_desc"
-    t.time     "est_time"
-    t.time     "act_time"
+    t.integer  "est_hour"
+    t.integer  "est_minute"
+    t.integer  "act_hour"
+    t.integer  "act_minute"
+    t.integer  "priority"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "priority"
   end
 
   create_table "users", :force => true do |t|

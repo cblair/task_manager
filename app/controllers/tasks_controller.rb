@@ -1,10 +1,12 @@
 class TasksController < ApplicationController
-  before_filter :authenticate_user!
-
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    sort_by = "id"
+    if defined? params[:sort_by]
+      sort_by = params[:sort_by]
+    end
+    @tasks = Task.all(:order => sort_by)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -59,6 +61,25 @@ class TasksController < ApplicationController
   # PUT /tasks/1.json
   def update
     @task = Task.find(params[:id])
+
+    #add add_time to the task act_time
+    if @task[:act_hour] == nil
+      @task[:act_hour] = 0
+    end
+    if @task[:act_minute] == nil
+      @task[:act_minute] = 0
+    end
+    
+    minutes = 
+      params["task"][:act_minute].to_i + params[:add_minute].to_i
+    
+    #carry over minutes to hours
+    carry_hours = minutes / 60
+      
+    params["task"][:act_minute] = minutes.remainder(60)
+    
+    params["task"][:act_hour] = 
+      (params["task"][:act_hour].to_i + params[:add_hour].to_i + carry_hours).to_s  
 
     respond_to do |format|
       if @task.update_attributes(params[:task])

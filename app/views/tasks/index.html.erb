@@ -2,11 +2,13 @@
 
 <table>
   <tr>
-    <th>Priority</th>
-    <th>Name</th>
-    <th>Task desc</th>
-    <th>Est time</th>
-    <th>Act time</th>
+    <th><%= link_to "Name", :sort_by => "name"%></th>
+    <th><%= link_to "Task desc", :sort_by => "task_desc"%></th>
+    <th>Est hour</th>
+    <th>Est minute</th>
+    <th>Act hour</th>
+    <th>Act minute</th>
+    <th><%= link_to "Priority", :sort_by => "priority"%></th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,11 +16,13 @@
 
 <% @tasks.each do |task| %>
   <tr>
-    <td><%= task.priority %></td>
     <td><%= task.name %></td>
     <td><%= task.task_desc %></td>
-    <td><%= task.est_time %></td>
-    <td><%= task.act_time %></td>
+    <td><%= task.est_hour %></td>
+    <td><%= task.est_minute %></td>
+    <td><%= task.act_hour %></td>
+    <td><%= task.act_minute %></td>
+    <td><%= task.priority %></td>
     <td><%= link_to 'Show', task %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
     <td><%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %></td>

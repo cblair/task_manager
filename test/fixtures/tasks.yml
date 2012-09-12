@@ -3,11 +3,17 @@
 one:
   name: MyString
   task_desc: MyString
-  est_time: 2012-09-05 20:13:13
-  act_time: 2012-09-05 20:13:13
+  est_hour: 1
+  est_minute: 1
+  act_hour: 1
+  act_minute: 1
+  priority: 1
 
 two:
   name: MyString
   task_desc: MyString
-  est_time: 2012-09-05 20:13:13
-  act_time: 2012-09-05 20:13:13
+  est_hour: 1
+  est_minute: 1
+  act_hour: 1
+  act_minute: 1
+  priority: 1

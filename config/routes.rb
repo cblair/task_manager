@@ -1,9 +1,9 @@
 TaskManager::Application.routes.draw do
+  resources :tasks
+
   resources :homes
 
   devise_for :users
-
-  resources :tasks
   
   root :to => "homes#index"
   

@@ -32828,3 +32828,3125 @@ Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:09:15 -0700
 Served asset /application.js - 304 Not Modified (25ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddPriorityToTasks (20120906031701)
+Migrating to DeviseCreateUsers (20120907232338)
+Migrating to CreateHomes (20120907234941)
+Migrating to CreateTasks (20120911022153)
+Migrating to CreateTaskCategories (20120914021448)
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "task_categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "task_category_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20120914021448')[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("homes")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("task_categories")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("tasks")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 19:16:00 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" [0m
+  Rendered task_categories/index.html.erb within layouts/application (4.8ms)
+Compiled task_categories.css  (2ms)  (pid 80958)
+Compiled application.css  (2028ms)  (pid 80958)
+Compiled task_categories.js  (186ms)  (pid 80958)
+Compiled application.js  (204ms)  (pid 80958)
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 2641ms (Views: 2637.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /homes.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /task_categories.js - 200 OK (4ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /homes.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /tasks.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /tasks.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (92ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /task_categories.css - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:03 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:04 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:04 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:04 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:04 -0700
+Served asset /bootstrap.js - 304 Not Modified (36ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:16:04 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:04 -0700
+Served asset /application.js - 304 Not Modified (308ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:04 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (2ms)
+
+
+Started GET "/task_categories/new" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Processing by TaskCategoriesController#new as HTML
+  Rendered task_categories/_form.html.erb (20.1ms)
+  Rendered task_categories/new.html.erb within layouts/application (27.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 67ms (Views: 57.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /tasks.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /tasks.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:09 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started POST "/task_categories" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Processing by TaskCategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LCARFSqzzYfnVGvVDm3SDpHWaRjsDVFzhYeqWIvfBlo=", "task_category"=>{"name"=>"test", "task_category_id"=>""}, "commit"=>"Create Task category"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (8.9ms)[0m  [1mINSERT INTO "task_categories" ("created_at", "name", "task_category_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 14 Sep 2012 02:16:27 UTC +00:00], ["name", "test"], ["task_category_id", nil], ["updated_at", Fri, 14 Sep 2012 02:16:27 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/task_categories/1
+Completed 302 Found in 22ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/task_categories/1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Processing by TaskCategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTaskCategory Load (0.4ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered task_categories/show.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:16:27 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" [0m
+  Rendered task_categories/index.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:16:30 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 19:49:36 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[36mTaskCategory Load (4.5ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" [0m
+  Rendered task_categories/index.html.erb within layouts/application (20.3ms)
+Completed 500 Internal Server Error in 34ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Listing task_categories</h1>
+    2: 
+    3: <% @root_task_category.each do |task_category| %>
+    4: 	<%= render :partial => "task_category_new", :locals => {:task_category => task_category} %>
+    5: <% end %>
+    6: 
+  app/views/task_categories/index.html.erb:3:in `_app_views_task_categories_index_html_erb__3280262697292783486_70114167113840'
+  app/controllers/task_categories_controller.rb:7:in `index'
+
+
+  Rendered /Users/cblair/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (86.3ms)
+  Rendered /Users/cblair/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/cblair/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (96.8ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 19:51:49 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[35mTaskCategory Load (0.8ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" IS NULL
+  Rendered task_categories/index.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (Missing partial task_categories/task_category_new, application/task_category_new with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/cblair/src/task_manager/app/views"
+  * "/Users/cblair/.rvm/gems/ruby-1.9.3-p125/gems/devise-2.1.2/app/views"
+):
+    1: <h1>Listing task_categories</h1>
+    2: 
+    3: <% @root_task_category.each do |task_category| %>
+    4: 	<%= render :partial => "task_category_new", :locals => {:task_category => task_category} %>
+    5: <% end %>
+    6: 
+    7: 
+  app/views/task_categories/index.html.erb:4:in `block in _app_views_task_categories_index_html_erb__3280262697292783486_70114167113840'
+  app/views/task_categories/index.html.erb:3:in `_app_views_task_categories_index_html_erb__3280262697292783486_70114167113840'
+  app/controllers/task_categories_controller.rb:9:in `index'
+
+
+  Rendered /Users/cblair/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.7ms)
+  Rendered /Users/cblair/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /Users/cblair/.rvm/gems/ruby-1.9.3-p125/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" IS NULL[0m
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 1
+  Rendered task_categories/_task_category_new.html.erb (8.8ms)
+  Rendered task_categories/index.html.erb within layouts/application (16.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 213ms (Views: 211.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /tasks.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:28 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:29 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:29 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:29 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:52:29 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:29 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories/new" for 127.0.0.1 at 2012-09-13 19:52:33 -0700
+Processing by TaskCategoriesController#new as HTML
+  Rendered task_categories/_form.html.erb (3.1ms)
+  Rendered task_categories/new.html.erb within layouts/application (4.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:33 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:33 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:33 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:33 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:33 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:52:34 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started POST "/task_categories" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Processing by TaskCategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LCARFSqzzYfnVGvVDm3SDpHWaRjsDVFzhYeqWIvfBlo=", "task_category"=>{"name"=>"testA", "task_category_id"=>"1"}, "commit"=>"Create Task category"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "task_categories" ("created_at", "name", "task_category_id", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 14 Sep 2012 02:52:49 UTC +00:00], ["name", "testA"], ["task_category_id", 1], ["updated_at", Fri, 14 Sep 2012 02:52:49 UTC +00:00]]
+  [1m[36m (7.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/task_categories/2
+Completed 302 Found in 17ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/task_categories/2" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Processing by TaskCategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTaskCategory Load (0.3ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered task_categories/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 145ms (Views: 142.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:49 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:52:50 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" IS NULL
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 1[0m
+  [1m[35mTaskCategory Load (0.1ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 2
+  Rendered task_categories/_task_category_new.html.erb (1.7ms)
+  Rendered task_categories/_task_category_new.html.erb (5.0ms)
+  Rendered task_categories/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:52:52 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[35mTaskCategory Load (0.6ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" IS NULL
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 1[0m
+  [1m[35mTaskCategory Load (0.1ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 2
+  Rendered task_categories/_task_category_new.html.erb (1.6ms)
+  Rendered task_categories/_task_category_new.html.erb (6.3ms)
+  Rendered task_categories/index.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:55:30 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories/2/edit" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Processing by TaskCategoriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTaskCategory Load (0.3ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered task_categories/_form.html.erb (3.3ms)
+  Rendered task_categories/edit.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 34ms (Views: 28.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:55:34 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" IS NULL
+  [1m[36mTaskCategory Load (0.1ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 1[0m
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 2
+  Rendered task_categories/_task_category_new.html.erb (1.8ms)
+  Rendered task_categories/_task_category_new.html.erb (4.2ms)
+  Rendered task_categories/index.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:41 -0700
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/task_categories/new" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Processing by TaskCategoriesController#new as HTML
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" 
+  Rendered task_categories/new.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /tasks.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:42 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:55:43 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[35mTaskCategory Load (0.3ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" IS NULL
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 1[0m
+  [1m[35mTaskCategory Load (0.1ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 2
+  Rendered task_categories/_task_category_new.html.erb (1.5ms)
+  Rendered task_categories/_task_category_new.html.erb (4.4ms)
+  Rendered task_categories/index.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /tasks.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:36 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:37 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:37 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:37 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:37 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:37 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:37 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:37 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:37 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:56:37 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:37 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:37 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/task_categories/2/edit" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Processing by TaskCategoriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered task_categories/_form.html.erb (3.6ms)
+  Rendered task_categories/edit.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:56:39 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories/2/edit" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Processing by TaskCategoriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTaskCategory Load (0.1ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" [0m
+  Rendered task_categories/_task_category_form.html.erb (9.7ms)
+  Rendered task_categories/edit.html.erb within layouts/application (11.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /tasks.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:59:44 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (7ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" IS NULL[0m
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 1
+  [1m[36mTaskCategory Load (0.1ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 2[0m
+  Rendered task_categories/_task_category_new.html.erb (1.8ms)
+  Rendered task_categories/_task_category_new.html.erb (8.3ms)
+  Rendered task_categories/index.html.erb within layouts/application (14.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /scaffolds.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 19:59:55 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories/new" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Processing by TaskCategoriesController#new as HTML
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" [0m
+  Rendered task_categories/_task_category_form.html.erb (3.1ms)
+  Rendered task_categories/new.html.erb within layouts/application (4.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 20:00:42 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" IS NULL[0m
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 1
+  [1m[36mTaskCategory Load (0.1ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 2[0m
+  Rendered task_categories/_task_category_new.html.erb (1.5ms)
+  Rendered task_categories/_task_category_new.html.erb (4.3ms)
+  Rendered task_categories/index.html.erb within layouts/application (6.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 75ms (Views: 73.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /tasks.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:44 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:45 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:45 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:45 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:45 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:45 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:45 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:45 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:45 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:45 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:45 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:45 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 20:00:45 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories/2/edit" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Processing by TaskCategoriesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" 
+  Rendered task_categories/_task_category_form.html.erb (2.4ms)
+  Rendered task_categories/edit.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 20:00:52 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" IS NULL
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 1[0m
+  [1m[35mTaskCategory Load (0.1ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 2
+  Rendered task_categories/_task_category_new.html.erb (1.6ms)
+  Rendered task_categories/_task_category_new.html.erb (4.6ms)
+  Rendered task_categories/index.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 80ms (Views: 79.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 20:00:57 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories/new" for 127.0.0.1 at 2012-09-13 20:00:58 -0700
+Processing by TaskCategoriesController#new as HTML
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" 
+  Rendered task_categories/_task_category_form.html.erb (2.8ms)
+  Rendered task_categories/new.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:58 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 20:00:59 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started POST "/task_categories" for 127.0.0.1 at 2012-09-13 20:01:06 -0700
+Processing by TaskCategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LCARFSqzzYfnVGvVDm3SDpHWaRjsDVFzhYeqWIvfBlo=", "task_category"=>{"name"=>"testAA", "task_category_id"=>"2"}, "commit"=>"Save Task category"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "task_categories" ("created_at", "name", "task_category_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Fri, 14 Sep 2012 03:01:06 UTC +00:00], ["name", "testAA"], ["task_category_id", 2], ["updated_at", Fri, 14 Sep 2012 03:01:06 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/task_categories/3
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/task_categories/3" for 127.0.0.1 at 2012-09-13 20:01:06 -0700
+Processing by TaskCategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered task_categories/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 102ms (Views: 101.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:06 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:06 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:06 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 20:01:07 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" IS NULL[0m
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 1
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 2[0m
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 3
+  Rendered task_categories/_task_category_new.html.erb (2.7ms)
+  Rendered task_categories/_task_category_new.html.erb (13.7ms)
+  Rendered task_categories/_task_category_new.html.erb (28.0ms)
+  Rendered task_categories/index.html.erb within layouts/application (30.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /application.css - 304 Not Modified (37ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /tasks.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:08 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:09 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:09 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 20:01:09 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories/3/edit" for 127.0.0.1 at 2012-09-13 20:01:11 -0700
+Processing by TaskCategoriesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTaskCategory Load (0.7ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" [0m
+  Rendered task_categories/_task_category_form.html.erb (3.2ms)
+  Rendered task_categories/edit.html.erb within layouts/application (5.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 109ms (Views: 103.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:11 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:11 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:11 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:11 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:11 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:11 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:11 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:12 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/task_categories" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Processing by TaskCategoriesController#index as HTML
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" IS NULL[0m
+  [1m[35mTaskCategory Load (0.2ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 1
+  [1m[36mTaskCategory Load (0.2ms)[0m  [1mSELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 2[0m
+  [1m[35mTaskCategory Load (0.1ms)[0m  SELECT "task_categories".* FROM "task_categories" WHERE "task_categories"."task_category_id" = 3
+  Rendered task_categories/_task_category_new.html.erb (1.5ms)
+  Rendered task_categories/_task_category_new.html.erb (3.9ms)
+  Rendered task_categories/_task_category_new.html.erb (6.6ms)
+  Rendered task_categories/index.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 20:01:15 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.7ms)[0m  SELECT "tasks".* FROM "tasks" 
+  Rendered tasks/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 49ms (Views: 31.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /task_categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /homes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/task_categories.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /task_categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /homes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /tasks.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:32 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:33 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:33 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:33 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:33 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:33 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:33 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:33 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootswatch-simplex.css" for 127.0.0.1 at 2012-09-13 20:01:33 -0700
+Served asset /bootswatch-simplex.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-13 20:01:33 -0700
+Served asset /application.js - 304 Not Modified (1ms)

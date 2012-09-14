@@ -1,0 +1,10 @@
+<h1>Listing task_categories</h1>
+
+<% @root_task_category.each do |task_category| %>
+	<%= render :partial => "task_category_new", :locals => {:task_category => task_category} %>
+<% end %>
+
+
+<br />
+
+<%= link_to 'New Task category', new_task_category_path %>

@@ -1,4 +1,6 @@
 TaskManager::Application.routes.draw do
+  resources :task_categories
+
   resources :tasks
 
   resources :homes

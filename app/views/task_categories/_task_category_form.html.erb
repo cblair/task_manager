@@ -1,0 +1,15 @@
+<%= form_for :task_category, :url => { :action => "create" }, :html => {:class => "task_category"} do |f| %>
+<table>
+<tr>
+	<td>Name:</td>
+	<td><%= f.text_field :name %></td>
+</tr>
+<tr>
+	<td>Parent:</td>
+	<td><%= f.select(:task_category_id, TaskCategory.all.collect {|c| [ c.name, c.id ] }) %></td>
+</tr>
+<tr>
+	<td><%= f.submit %></td>
+</tr>
+</table>
+<% end %>

@@ -1,0 +1,16 @@
+AL:
+*git
+	*branches
+	*merge tools
+	*proc to master
+*data io
+	*scripts
+	*db disc - Torre
+		*metadata class - tied with data i/o
+				- user defined primary keys for docs!
+				- check drop box
+	*data i/o
+	
+
+*task manager
+

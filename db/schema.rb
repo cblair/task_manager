@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120914021448) do
+ActiveRecord::Schema.define(:version => 20120914032154) do
 
   create_table "homes", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -33,8 +33,9 @@ ActiveRecord::Schema.define(:version => 20120914021448) do
     t.integer  "act_hour"
     t.integer  "act_minute"
     t.integer  "priority"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "task_category_id"
   end
 
   create_table "users", :force => true do |t|

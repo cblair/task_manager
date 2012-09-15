@@ -9,12 +9,23 @@
     <th>Act hour</th>
     <th>Act minute</th>
     <th><%= link_to "Priority", :sort_by => "priority"%></th>
+    <th>Task Category</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @tasks.each do |task| %>
+  <% 
+  	if task.task_category_id != nil
+  		task_category = TaskCategory.find(task.task_category_id)
+  		task_category_name = task_category.name
+  	else
+  		task_category = nil
+  		task_category_name = ""
+  	end		
+  %>
+  		
   <tr>
     <td><%= task.name %></td>
     <td><%= task.task_desc %></td>
@@ -23,6 +34,7 @@
     <td><%= task.act_hour %></td>
     <td><%= task.act_minute %></td>
     <td><%= task.priority %></td>
+    <td><%= link_to task_category_name, task_category %> </td>
     <td><%= link_to 'Show', task %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
     <td><%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %></td>

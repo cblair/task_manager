@@ -1,4 +1,6 @@
 class TaskCategoriesController < ApplicationController
+  include TaskCategoriesHelper
+  
   # GET /task_categories
   # GET /task_categories.json
   def index
@@ -75,6 +77,10 @@ class TaskCategoriesController < ApplicationController
   # DELETE /task_categories/1.json
   def destroy
     @task_category = TaskCategory.find(params[:id])
+    
+    #delete children
+    destroy_task_category_and_ancestors(@task_category)
+    
     @task_category.destroy
 
     respond_to do |format|

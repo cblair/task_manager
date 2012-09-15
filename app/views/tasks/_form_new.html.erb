@@ -33,6 +33,12 @@
     <%= f.number_field :priority, options = 
     	{ :value => 1, :min => 1, :max => 5 } %>
   </div>
+  <div class="field">
+  	<%= f.label :task_category_id %><br />
+	<%= 
+	 f.select(:task_category_id, TaskCategory.all.collect {|c| [ c.name, c.id ] } )
+	 %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

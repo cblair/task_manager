@@ -1,0 +1,29 @@
+<h1>Listing specifications</h1>
+
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Spec desc</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @specifications.each do |specification| %>
+  <tr>
+    <td><%= specification.name %></td>
+    <td><%= specification.spec_desc %></td>
+    <td><%= 
+    	specification.category.name 
+    	%></td>
+    <td><%= link_to 'Show', specification %></td>
+    <td><%= link_to 'Edit', edit_specification_path(specification) %></td>
+    <td><%= link_to 'Destroy', specification, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Specification', new_specification_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Req desc:</b>
+  <%= @requirement.req_desc %>
+</p>
+
+<p>
+  <b>Specification:</b>
+  <%= @requirement.specification_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_requirement_path(@requirement) %> |
+<%= link_to 'Back', requirements_path %>

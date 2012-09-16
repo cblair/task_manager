@@ -1,4 +1,10 @@
 TaskManager::Application.routes.draw do
+  resources :categories
+
+  resources :requirements
+
+  resources :specifications
+
   resources :task_categories
 
   resources :tasks

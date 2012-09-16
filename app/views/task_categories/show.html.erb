@@ -4,13 +4,13 @@
   <h2>Name: <%= @task_category.name %></h2>
 </p>
 
-	<h2>Tasks</h2>
-   	<% Task.where(:task_category_id => @task_category.id).each do |task| %>
+	<h2>Specifications</h2>
+   	<% @task_category.specifications.each do |specification| %>
 		<ul>
-			<li>Task: <%= task.name %>
-				<%= link_to 'Show', task %>
-    			<%= link_to 'Edit', edit_task_path(task) %>
-    			<%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %>
+			<li>Specification: <%= specification.name %>
+				<%= link_to 'Show', specification %>
+    			<%= link_to 'Edit', edit_specification_path(specification) %>
+    			<%= link_to 'Destroy', specification, confirm: 'Are you sure?', method: :delete %>
 			</li>
 		</ul>
 	<% end %>

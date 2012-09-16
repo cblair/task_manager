@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h3><%= @specification.name %></h3>
+</p>
+
+<p>
+  <%= @specification.spec_desc %>
+</p>
+
+<h4>Requirements</h4>
+
+<table class="table">
+	<% @specification.requirements.each do |requirement| %>
+	  <tr>
+	    <td><%= requirement.req_desc %></td>
+	    <td><%= link_to 'Show', requirement %></td>
+	    <td><%= link_to 'Edit', edit_requirement_path(requirement) %></td>
+	    <td><%= link_to 'Destroy', requirement, confirm: 'Are you sure?', method: :delete %></td>
+	  </tr>
+	<% end %>
+</table>
+
+
+<%= link_to 'Edit', edit_specification_path(@specification) %> |
+<%= link_to 'Back', specifications_path %>

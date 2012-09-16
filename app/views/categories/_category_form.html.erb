@@ -1,0 +1,19 @@
+<%= form_for :category, :url => { :action => "create" }, :html => {:class => "category"} do |f| %>
+<table>
+<tr>
+	<td>Name:</td>
+	<td><%= f.text_field :name %></td>
+</tr>
+<tr>
+	<td>Parent:</td>
+	<% 
+		categories = Category.all.collect {|c| [ c.name, c.id ] }
+		categories.append(["(none)", nil])
+	%>
+	<td><%= f.select(:category_id, categories) %></td>
+</tr>
+<tr>
+	<td><%= f.submit %></td>
+</tr>
+</table>
+<% end %>

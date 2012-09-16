@@ -5,16 +5,6 @@
     	<%= link_to 'Destroy', task_category, confirm: 'Are you sure?', method: :delete %>
     </li>
     
-   	<% Task.where(:task_category_id => task_category.id).each do |task| %>
-		<ul>
-			<li>Task: <%= task.name %>
-				<%= link_to 'Show', task %>
-    			<%= link_to 'Edit', edit_task_path(task) %>
-    			<%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %>
-			</li>
-		</ul>
-	<% end %>
-    
     <% TaskCategory.where(:task_category_id => task_category.id).each do |child_task_category| %>
 		<%= render :partial => "task_category_new", :locals => {:task_category => child_task_category} %>
   	<% end %>

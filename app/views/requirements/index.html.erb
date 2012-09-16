@@ -10,9 +10,19 @@
   </tr>
 
 <% @requirements.each do |requirement| %>
+  <% 
+  	if requirement.specification_id != nil
+  		specification = Specification.find(requirement.specification_id)
+  		specification_name = specification.name
+  	else
+  		specification = nil
+  		specification_name = ""
+  	end		
+  %>
+  
   <tr>
     <td><%= requirement.req_desc %></td>
-    <td><%= requirement.specification.name %></td>
+    <td><%= specification_name %></td>
     <td><%= link_to 'Show', requirement %></td>
     <td><%= link_to 'Edit', edit_requirement_path(requirement) %></td>
     <td><%= link_to 'Destroy', requirement, confirm: 'Are you sure?', method: :delete %></td>

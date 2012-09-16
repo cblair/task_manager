@@ -73,6 +73,13 @@ class SpecificationsController < ApplicationController
   # DELETE /specifications/1.json
   def destroy
     @specification = Specification.find(params[:id])
+    
+    #set requirements that point this to point to nil
+    @specification.requirements.each do |requirement|
+      requirement.specification_id = nil
+      requirement.save
+    end
+    
     @specification.destroy
 
     respond_to do |format|

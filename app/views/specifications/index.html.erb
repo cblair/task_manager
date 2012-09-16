@@ -11,11 +11,21 @@
   </tr>
 
 <% @specifications.each do |specification| %>
+  <% 
+  	if specification.category_id != nil
+  		category = Category.find(specification.category_id)
+  		category_name = category.name
+  	else
+  		category = nil
+  		category_name = ""
+  	end		
+  %>
+  
   <tr>
     <td><%= specification.name %></td>
     <td><%= specification.spec_desc %></td>
     <td><%= 
-    	specification.category.name 
+    	category_name 
     	%></td>
     <td><%= link_to 'Show', specification %></td>
     <td><%= link_to 'Edit', edit_specification_path(specification) %></td>

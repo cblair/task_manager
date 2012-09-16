@@ -45,8 +45,8 @@ gem 'ruby-debug-base19', :git => 'https://github.com/tribune/ruby-debug-base19.g
 gem 'linecache19', :git => 'git@github.com:chuckg/linecache19.git', :branch => "0_5_13/dependencies", :require => false
 else
   #Ubuntu 11.10 likes this. ?
-  gem 'ruby-debug', :platforms => :ruby_18
-  gem 'ruby-debug19', :platforms => :ruby_19
+  #gem 'ruby-debug', :platforms => :ruby_18
+  #gem 'ruby-debug19', :platforms => :ruby_19
 end
 
 #Devise

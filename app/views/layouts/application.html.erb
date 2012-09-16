@@ -31,6 +31,7 @@
 	            		link_to "sign out", destroy_user_session_path,
 	            				:method => :delete
 	            	else
+	            		notice = "Sign in to use TaskManager."
 	            		link_to "sign in", new_user_session_path
 	            	end
             	
@@ -63,7 +64,12 @@
     <% end %>
 
 	<div class="well" style="background-color: #f5f5f5;">
-	<%= yield %>
+	<% public_controllers = ["homes", "sessions", "registrations"] %>
+	<% if user_signed_in? or public_controllers.include?(controller.controller_name) %>
+		<%= yield %>
+	<% else %>
+		<%= link_to "Sign in", new_user_session_path %>
+	<% end %>
 	</div>
 </div>
 

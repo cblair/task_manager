@@ -2,6 +2,7 @@
 
 <table class="table">
   <tr>
+  	<th>Progress</th>
     <th><%= link_to "Name", :sort_by => "name"%></th>
     <th><%= link_to "Task desc", :sort_by => "task_desc"%></th>
     <th>Est hour</th>
@@ -23,10 +24,21 @@
   	else
   		category = nil
   		category_name = ""
-  	end		
+  	end
+  	
+  	begin
+  		total_est_minute = (task.est_hour * 60) + task.est_minute	
+  		total_act_minute = (task.act_hour * 60) + task.act_minute
+  		progress = (total_act_minute.to_f / total_est_minute.to_f) * 100
+  	rescue
+  		progress = 0
+  	end
   %>
-  		
+  
   <tr>
+  	<td class="progress">
+        <div class="bar" style="width: <%= progress %>%;"></div>
+    </td>
     <td><%= task.name %></td>
     <td><%= task.task_desc %></td>
     <td><%= task.est_hour %></td>

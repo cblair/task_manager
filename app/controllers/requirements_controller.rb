@@ -44,8 +44,10 @@ class RequirementsController < ApplicationController
 
     respond_to do |format|
       if @requirement.save
-        format.html { redirect_to @requirement, notice: 'Requirement was successfully created.' }
-        format.json { render json: @requirement, status: :created, location: @requirement }
+        format.html { redirect_to @requirement.specification, 
+                      notice: 'Requirement was successfully created.' }
+        format.json { render json: @requirement.specification, 
+                      status: :created, location: @requirement }
       else
         format.html { render action: "new" }
         format.json { render json: @requirement.errors, status: :unprocessable_entity }
@@ -60,7 +62,8 @@ class RequirementsController < ApplicationController
 
     respond_to do |format|
       if @requirement.update_attributes(params[:requirement])
-        format.html { redirect_to @requirement, notice: 'Requirement was successfully updated.' }
+        format.html { redirect_to @requirement.specification, 
+                      notice: 'Requirement was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -73,10 +76,12 @@ class RequirementsController < ApplicationController
   # DELETE /requirements/1.json
   def destroy
     @requirement = Requirement.find(params[:id])
+    specification = @requirement.specification
     @requirement.destroy
 
     respond_to do |format|
-      format.html { redirect_to requirements_url }
+      format.html { redirect_to :controller => "specifications", 
+                                :action => "show", :id => specification.id }
       format.json { head :no_content }
     end
   end

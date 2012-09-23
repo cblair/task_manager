@@ -4,33 +4,27 @@
   <title>TaskManager</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag 'jquery' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <div class="page-header">
-    <h1 class="brand">TaskManager</h1>
-    <p></p>
-  <div class="navbar">
-    <div class="navbar-inner">
-      <div class="container" style="width: auto;">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <div class="nav-collapse">
-          <ul class="nav">
-            <li><%= link_to "Home", root_path %></li>
-            <li class="divider-vertical"></li>
-            <li><%= link_to "Tasks", tasks_path %></li>
-            <li class="divider-vertical"></li>
-            <li><%= link_to "Categories", categories_path %></li>
-            <li class="divider-vertical"></li>
-            <li><%= link_to "Specifications", specifications_path %></li>
-            <li class="divider-vertical"></li>
-            <li><%= link_to "Requirements", requirements_path %></li>
-            <li class="divider-vertical"></li>
-            <li><%=
+<body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
+<script src="../js/bsa.js"></script>
+
+<header class="jumbotron subhead" id="overview">
+  <div class="row">
+    <div class="span6">
+      <h1>TaskManager</h1>
+      <p class="lead">A project management process tracker.</p>
+    </div>
+  </div>
+  <div class="subnav">
+    <ul class="nav nav-pills">
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Tasks", tasks_path %></li>
+      <li><%= link_to "Categories", categories_path %></li>
+      <li><%= link_to "Specifications", specifications_path %></li>
+      <li><%= link_to "Requirements", requirements_path %></li>
+      <li><%=
             		if user_signed_in?
 	            		link_to "sign out", destroy_user_session_path,
 	            				:method => :delete
@@ -39,16 +33,10 @@
 	            		link_to "sign in", new_user_session_path
 	            	end
             	
-            	%></li>
-            <li class="divider-vertical"></li>
-          </ul>
-          <ul class="nav pull-right">
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div>
-    </div><!-- /navbar-inner -->
-  </div><!-- /navbar -->
-</div>
+       %></li>
+    </ul>
+  </div>
+</header>
 
 <div class="container well" style="background-color: #dfdfdf;">
     <% if notice || alert %>

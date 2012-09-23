@@ -16,3 +16,10 @@
 
 // Loads all Bootstrap javascripts
 //= require bootstrap
+
+//Just some test jQuery
+//$(document).ready(function(){
+//	$('p').click(function(event){
+//		$(this).fadeToggle(500);
+//	});
+//});

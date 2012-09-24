@@ -24,8 +24,17 @@ class SpecificationsController < ApplicationController
   # GET /specifications/new
   # GET /specifications/new.json
   def new
-    @specification = Specification.new
+    #if a category linked to us, use it for forms
+    begin
+      @category = Category.find(params[:category_id])
+      category_id = @category.id
+    rescue
+      @category = nil
+      category_id = nil
+    end
 
+    @specification = Specification.new(:category_id => category_id)
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @specification }
@@ -73,6 +82,7 @@ class SpecificationsController < ApplicationController
   # DELETE /specifications/1.json
   def destroy
     @specification = Specification.find(params[:id])
+    category = @specification.category
     
     #set requirements that point this to point to nil
     @specification.requirements.each do |requirement|
@@ -83,7 +93,8 @@ class SpecificationsController < ApplicationController
     @specification.destroy
 
     respond_to do |format|
-      format.html { redirect_to specifications_url }
+      format.html { redirect_to :controller => "categories", 
+                                :action => "show", :id => category.id }
       format.json { head :no_content }
     end
   end

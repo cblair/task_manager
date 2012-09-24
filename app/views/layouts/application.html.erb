@@ -20,10 +20,10 @@
   <div class="subnav">
     <ul class="nav nav-pills">
       <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Tasks", tasks_path %></li>
       <li><%= link_to "Categories", categories_path %></li>
       <li><%= link_to "Specifications", specifications_path %></li>
       <li><%= link_to "Requirements", requirements_path %></li>
+      <li><%= link_to "Tasks", tasks_path %></li>
       <li><%=
             		if user_signed_in?
 	            		link_to "sign out", destroy_user_session_path,

@@ -24,7 +24,16 @@ class RequirementsController < ApplicationController
   # GET /requirements/new
   # GET /requirements/new.json
   def new
-    @requirement = Requirement.new
+    #if a category linked to us, use it for forms
+    begin
+      @specification = Specification.find(params[:specification_id])
+      specification_id = @specification.id
+    rescue
+      @specification = nil
+      specification_id = nil
+    end
+    
+    @requirement = Requirement.new(:specification_id => specification_id)
 
     respond_to do |format|
       format.html # new.html.erb

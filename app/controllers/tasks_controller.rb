@@ -6,6 +6,7 @@ class TasksController < ApplicationController
     if defined? params[:sort_by]
       sort_by = params[:sort_by]
     end
+    
     @tasks = Task.all(:order => sort_by)
 
     respond_to do |format|
@@ -28,7 +29,16 @@ class TasksController < ApplicationController
   # GET /tasks/new
   # GET /tasks/new.json
   def new
-    @task = Task.new
+    #if a category linked to us, use it for forms
+    begin
+      @category = Category.find(params[:category_id])
+      category_id = @category.id
+    rescue
+      @category = nil
+      category_id = nil
+    end
+
+    @task = Task.new(:category_id => category_id)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -96,10 +106,16 @@ class TasksController < ApplicationController
   # DELETE /tasks/1.json
   def destroy
     @task = Task.find(params[:id])
+    category = @task.category
+    
     @task.destroy
 
     respond_to do |format|
-      format.html { redirect_to tasks_url }
+      if category == nil
+        format.html { redirect_to tasks_url }
+      else
+        format.html { redirect_to category }
+       end
       format.json { head :no_content }
     end
   end

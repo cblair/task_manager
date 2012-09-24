@@ -2,4 +2,8 @@
 
 <%= render 'form_new' %>
 
-<%= link_to 'Back', tasks_path %>
+<% if @category == nil %>
+	<%= link_to 'Back', tasks_path %>
+<% else %>
+	<%= link_to "Back", @category %>
+<% end %>

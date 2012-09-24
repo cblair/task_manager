@@ -10,7 +10,8 @@
 		categories = Category.all.collect {|c| [ c.name, c.id ] }
 		categories.append(["(none)", nil])
 	%>
-	<td><%= f.select(:category_id, get_all_category_select_options) %></td>
+	<td><%= f.select(:category_id, get_all_category_select_options, 
+			{:include_blank => '(none)'} ) %></td>
 </tr>
 <tr>
 	<td><%= f.submit %></td>

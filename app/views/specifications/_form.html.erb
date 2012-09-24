@@ -21,9 +21,8 @@
   </div>
   <div class="field">
   	<%= f.label :category_id %><br />
-	<%= 
-	 f.select(:category_id, Category.all.collect {|c| [ c.name, c.id ] } )
-	 %>
+	<%= f.select(:category_id, get_all_category_select_options, 
+		{:include_blank => '(none)'} ) %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -2,77 +2,88 @@
 
 <h3><%= @category.name %></h3>
 
-<h4>Specifications</h4>
-
-<table class="table">	
-<% @category.specifications.each do |specification| %>
-	<tr>
-		<td><%= specification.id %></td>
-		<td><%= specification.name %></td>
-		<td><%= link_to 'Show', specification %></td>
-		<td><%= link_to 'Edit', edit_specification_path(specification) %></td>
-		<td><%= link_to 'Destroy', specification, confirm: 'Are you sure?', method: :delete %></td>
-	</tr>
-<% end %>
-</table>
+<!--This is a list of this scaffold's child components-->
+<div id="scaffold_child">
+	<h4>Specifications</h4>
+	
+	<table class="table">	
+	<% @category.specifications.each do |specification| %>
+		<tr>
+			<td><%= specification.id %></td>
+			<td><%= specification.name %></td>
+			<td><%= link_to 'Show', specification %></td>
+			<td><%= link_to 'Edit', edit_specification_path(specification) %></td>
+			<td><%= link_to 'Destroy', specification, confirm: 'Are you sure?', method: :delete %></td>
+		</tr>
+	<% end %>
+	</table>
 
 <%= link_to 'New Specification', new_specification_path(:category_id => @category.id) %>
 
+<p id="scaffold_child_elipsis">...</p>
+
+</div><!--end of scaffold_child-->
+
 <br /><br />
 
-<h4>Tasks</h4>
-
-<table class="table">
-	<th>Progress</th>
-    <th><%= link_to "Name", :sort_by => "name"%></th>
-    <th><%= link_to "Task desc", :sort_by => "task_desc"%></th>
-    <th>Est hour</th>
-    <th>Est minute</th>
-    <th>Act hour</th>
-    <th>Act minute</th>
-    <th><%= link_to "Priority", :sort_by => "priority"%></th>
-    <th>Category</th>
-    <th></th>
-    <th></th>
-    <th></th>	
-<% @category.tasks.each do |task| %>
-  <% 
-  	if task.category_id != nil
-  		category = Category.find(task.category_id)
-  		category_name = category.name
-  	else
-  		category = nil
-  		category_name = ""
-  	end
-  	
-  	begin
-  		total_est_minute = (task.est_hour * 60) + task.est_minute	
-  		total_act_minute = (task.act_hour * 60) + task.act_minute
-  		progress = (total_act_minute.to_f / total_est_minute.to_f) * 100
-  	rescue
-  		progress = 0
-  	end
-  %>
-	<tr>
-		<td class="progress">
-        	<div class="bar" style="width: <%= progress %>%;"></div>
-    	</td>
-   	<td><%= task.name %></td>
-    <td><%= task.task_desc %></td>
-    <td><%= task.est_hour %></td>
-    <td><%= task.est_minute %></td>
-    <td><%= task.act_hour %></td>
-    <td><%= task.act_minute %></td>
-    <td><%= task.priority %></td>
-    <td><%= link_to category_name, category %> </td>
-    <td><%= link_to 'Show', task %></td>
-    <td><%= link_to 'Edit', edit_task_path(task) %></td>
-    <td><%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %></td>
-	</tr>
-<% end %>
-</table>
-
-<%= link_to 'New Task', new_task_path(:category_id => @category.id) %>
+<!--This is a list of this scaffold's child components-->
+<div id="scaffold_child">
+	<h4>Tasks</h4>
+	
+	<table class="table">
+		<th>Progress</th>
+	    <th><%= link_to "Name", :sort_by => "name"%></th>
+	    <th><%= link_to "Task desc", :sort_by => "task_desc"%></th>
+	    <th>Est hour</th>
+	    <th>Est minute</th>
+	    <th>Act hour</th>
+	    <th>Act minute</th>
+	    <th><%= link_to "Priority", :sort_by => "priority"%></th>
+	    <th>Category</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>	
+	<% @category.tasks.each do |task| %>
+	  <% 
+	  	if task.category_id != nil
+	  		category = Category.find(task.category_id)
+	  		category_name = category.name
+	  	else
+	  		category = nil
+	  		category_name = ""
+	  	end
+	  	
+	  	begin
+	  		total_est_minute = (task.est_hour * 60) + task.est_minute	
+	  		total_act_minute = (task.act_hour * 60) + task.act_minute
+	  		progress = (total_act_minute.to_f / total_est_minute.to_f) * 100
+	  	rescue
+	  		progress = 0
+	  	end
+	  %>
+		<tr>
+			<td class="progress">
+	        	<div class="bar" style="width: <%= progress %>%;"></div>
+	    	</td>
+	   	<td><%= task.name %></td>
+	    <td><%= task.task_desc %></td>
+	    <td><%= task.est_hour %></td>
+	    <td><%= task.est_minute %></td>
+	    <td><%= task.act_hour %></td>
+	    <td><%= task.act_minute %></td>
+	    <td><%= task.priority %></td>
+	    <td><%= link_to category_name, category %> </td>
+	    <td><%= link_to 'Show', task %></td>
+	    <td><%= link_to 'Edit', edit_task_path(task) %></td>
+	    <td><%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %></td>
+		</tr>
+	<% end %>
+	</table>
+	
+	<%= link_to 'New Task', new_task_path(:category_id => @category.id) %>
+	
+	<p id="scaffold_child_elipsis">...</p>
+</div><!--end of scaffold_child-->
 
 <br /> <br />
 <%= link_to 'Edit', edit_category_path(@category) %> |

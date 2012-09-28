@@ -17,9 +17,16 @@
 // Loads all Bootstrap javascripts
 //= require bootstrap
 
-//Just some test jQuery
+//Hides stuff we don't want to see
 $(document).ready(function(){
-	$('p').click(function(event){
-		$(this).fadeToggle(500);
+	$('div#scaffold_child').children('table').toggle();
+	$('div#scaffold_child').children('a').toggle();
+	
+	$('div#scaffold_child').click(function(event){
+		event.preventDefault();
+		
+		$(this).children('table').toggle();
+		$(this).children('a').toggle();
+		$(this).children('p#scaffold_child_elipsis').toggle();
 	});
 });

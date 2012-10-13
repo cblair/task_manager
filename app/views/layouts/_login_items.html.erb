@@ -1,0 +1,9 @@
+<li><%=
+	if user_signed_in?
+		link_to "sign out", destroy_user_session_path,
+				:method => :delete
+	else
+		notice = "Sign in to use TaskManager."
+		link_to "sign in", new_user_session_path
+	end
+%></li>

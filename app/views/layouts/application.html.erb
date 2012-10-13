@@ -17,26 +17,28 @@
       <p class="lead">A project management process tracker.</p>
     </div>
   </div>
-  <div class="subnav">
-    <ul class="nav nav-pills">
-      <li><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Categories", categories_path %></li>
-      <li><%= link_to "Specifications", specifications_path %></li>
-      <li><%= link_to "Requirements", requirements_path %></li>
-      <li><%= link_to "Tasks", tasks_path %></li>
-      <li><%=
-            		if user_signed_in?
-	            		link_to "sign out", destroy_user_session_path,
-	            				:method => :delete
-	            	else
-	            		notice = "Sign in to use TaskManager."
-	            		link_to "sign in", new_user_session_path
-	            	end
-            	
-       %></li>
-    </ul>
-  </div>
 </header>
+<div class="navbar">
+	<div class="navbar-inner">
+	  <div class="container" style="width: auto;">
+	    <div class="nav">
+          <ul class="nav">
+		      <li><%= link_to "Home", root_path %></li>
+		      <li><%= link_to "Categories", categories_path %></li>
+		      <li><%= link_to "Specifications", specifications_path %></li>
+		      <li><%= link_to "Requirements", requirements_path %></li>
+		      <li><%= link_to "Tasks", tasks_path %></li>
+		  </ul>
+		  <ul class="nav pull-right">
+		  	<%= render 'layouts/registration_items' %>
+		  	<li class="divider-vertical"></li>
+		  	<%= render 'layouts/login_items' %>
+		  </ul>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div><!-- /navbar-inner -->
+  </div><!-- /navbar -->
+</div>
 
 <div class="container well" style="background-color: #dfdfdf;">
     <% if notice || alert %>
@@ -56,7 +58,7 @@
     <% end %>
 
 	<div class="well" style="background-color: #f5f5f5;">
-	<% public_controllers = ["homes", "sessions", "registrations"] %>
+	<% public_controllers = ["homes", "sessions", "registrations", "users", "passwords"] %>
 	<% if user_signed_in? or public_controllers.include?(controller.controller_name) %>
 		<%= yield %>
 	<% else %>

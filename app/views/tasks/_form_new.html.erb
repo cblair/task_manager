@@ -37,6 +37,12 @@
   	<%= f.label :category_id %><br />
 	<%= f.select(:category_id, get_all_category_select_options, {:include_blank => '(none)'} ) %>
   </div>
+  <div class="field">
+  	<%= f.label :milestone_id %><br />
+	<%= 
+	 f.select(:milestone_id, Milestone.all.collect {|m| [ m.name, m.id ] } )
+	 %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

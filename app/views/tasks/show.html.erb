@@ -35,6 +35,11 @@
   <%= @task.priority %>
 </p>
 
+<p>
+  <b>Milestone</b>
+  <%= @task.milestone.name %>
+</p>
+
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <% if @task.category == nil %>
 	<%= link_to 'Back', tasks_path %>

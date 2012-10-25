@@ -1,35 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h3><%= @category.name %></h3>
+<p>
+  <b>Name:</b>
+  <%= @milestone.name %>
+</p>
 
-<!--This is a list of this scaffold's child components-->
-<div id="scaffold_child">
-	<h4>Specifications</h4>
-	
-	<table class="table">	
-	<% @category.specifications.each do |specification| %>
-		<tr>
-			<td><%= specification.id %></td>
-			<td><%= specification.name %></td>
-			<td><%= link_to 'Show', specification %></td>
-			<td><%= link_to 'Edit', edit_specification_path(specification) %></td>
-			<td><%= link_to 'Destroy', specification, confirm: 'Are you sure?', method: :delete %></td>
-		</tr>
-	<% end %>
-	</table>
+<p>
+  <b>Milestone desc:</b>
+  <%= @milestone.milestone_desc %>
+</p>
 
-<%= link_to 'New Specification', new_specification_path(:category_id => @category.id) %>
+<p>
+  <b>Due data:</b>
+  <%= @milestone.due_date %>
+</p>
 
-<p id="scaffold_child_elipsis">...</p>
-
-</div><!--end of scaffold_child-->
-
-<br /><br />
-
-<!--This is a list of this scaffold's child components-->
-<div id="scaffold_child">
-	<h4>Tasks</h4>
-	
+<h4>Tasks</h4>
 	<table class="table">
 		<th>Progress</th>
 	    <th><%= link_to "Name", :sort_by => "name"%></th>
@@ -43,8 +29,8 @@
 	    <th>Milestone</th>
 	    <th></th>
 	    <th></th>
-	    <th></th>	
-	<% @category.tasks.each do |task| %>
+	    <th></th>
+	<% @milestone.tasks.each do |task| %>
 	  <% 
 	  	if task.category_id != nil
 	  		category = Category.find(task.category_id)
@@ -68,9 +54,9 @@
 	  	end
 	  %>
 		<tr>
-			<td class="progress">
-	        	<div class="bar" style="width: <%= progress %>%;"></div>
-	    	</td>
+		<td class="progress">
+        	<div class="bar" style="width: <%= progress %>%;"></div>
+    	</td>
 	   	<td><%= task.name %></td>
 	    <td><%= task.task_desc %></td>
 	    <td><%= task.est_hour %></td>
@@ -86,12 +72,7 @@
 		</tr>
 	<% end %>
 	</table>
-	
-	<%= link_to 'New Task', new_task_path(:category_id => @category.id) %>
-	
-	<p id="scaffold_child_elipsis">...</p>
-</div><!--end of scaffold_child-->
 
-<br /> <br />
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+
+<%= link_to 'Edit', edit_milestone_path(@milestone) %> |
+<%= link_to 'Back', milestones_path %>

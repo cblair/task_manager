@@ -1,4 +1,6 @@
 TaskManager::Application.routes.draw do
+  resources :milestones
+
   resources :categories
 
   resources :requirements

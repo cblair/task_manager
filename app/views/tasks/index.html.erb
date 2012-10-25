@@ -11,6 +11,7 @@
     <th>Act minute</th>
     <th><%= link_to "Priority", :sort_by => "priority"%></th>
     <th>Category</th>
+    <th>Milestone</th>
     <th></th>
     <th></th>
     <th></th>
@@ -25,6 +26,11 @@
   		category = nil
   		category_name = ""
   	end
+  	
+	milestone_name = ""
+  	if task.milestone != nil
+  		milestone_name = task.milestone.name
+  	end  	
   	
   	begin
   		total_est_minute = (task.est_hour * 60) + task.est_minute	
@@ -47,6 +53,7 @@
     <td><%= task.act_minute %></td>
     <td><%= task.priority %></td>
     <td><%= link_to category_name, category %> </td>
+    <td><%= milestone_name %></td>
     <td><%= link_to 'Show', task %></td>
     <td><%= link_to 'Edit', edit_task_path(task) %></td>
     <td><%= link_to 'Destroy', task, confirm: 'Are you sure?', method: :delete %></td>

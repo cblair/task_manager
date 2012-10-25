@@ -49,6 +49,13 @@
 	 f.select(:category_id, Category.all.collect {|c| [ c.name, c.id ] } )
 	 %>
   </div>
+  <div class="field">
+  <%= f.label :milestone_id %><br />
+  <%= 
+	f.select(:milestone_id, Milestone.all.collect {|m| [ m.name, m.id ] }, 
+				{:selected => @task.milestone_id} )
+  %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

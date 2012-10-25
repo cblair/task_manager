@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  milestone_desc: MyText
+  due_data: 2012-10-24 19:34:22
+
+two:
+  name: MyString
+  milestone_desc: MyText
+  due_data: 2012-10-24 19:34:22

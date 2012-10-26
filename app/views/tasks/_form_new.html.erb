@@ -40,7 +40,12 @@
   <div class="field">
   	<%= f.label :milestone_id %><br />
 	<%= 
-	 f.select(:milestone_id, Milestone.all.collect {|m| [ m.name, m.id ] } )
+	 if params.include?('milestone_id')
+	 	f.select(:milestone_id, Milestone.all.collect {|m| [ m.name, m.id ] }, 
+	 				{:selected => params[:milestone_id]} )
+	 else
+	 	f.select(:milestone_id, Milestone.all.collect {|m| [ m.name, m.id ] } )
+	 end
 	 %>
   </div>
   <div class="actions">

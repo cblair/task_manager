@@ -14,7 +14,35 @@ class MilestonesController < ApplicationController
   # GET /milestones/1.json
   def show
     @milestone = Milestone.find(params[:id])
+    
+    milestone_total_act_minutes = 0
+    milestone_total_est_minutes = 0
+    @milestone.tasks.each do |task|
+      begin
+        total_est_minute = (task.est_hour * 60) + task.est_minute 
+        milestone_total_est_minutes += total_est_minute
+      rescue
+        milestone_total_est_minutes = 0
+      end
+      begin
+        total_act_minute = (task.act_hour * 60) + task.act_minute
 
+        milestone_total_act_minutes += total_act_minute
+      rescue
+        milestone_total_act_minutes += 0
+      end
+    end
+    
+    @milestone_total_act_hours = milestone_total_act_minutes / 60 
+    @milestone_total_est_hours = milestone_total_est_minutes / 60
+    
+    @milestone_progress = 
+      (@milestone_total_act_hours.to_f / @milestone_total_est_hours.to_f) * 100
+    
+    if @milestone_progress > 100
+      flash[:alert]='Actual times are over estimated times'
+    end
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @milestone }

@@ -1,0 +1,11 @@
+<% if @task.category != nil %>
+	<%= link_to "Back to Category", @task.category %> |
+<% end %>
+
+<% if @task.milestone %>
+	<%= link_to 'Back to Milestone', @task.milestone %> |
+<% elsif params.include?('milestone_id') %>
+	<%= link_to 'Back to Milestone ', Milestone.find(params[:milestone_id]) %> |
+<% end %>
+
+<%= link_to 'Back to Task index', tasks_path %>

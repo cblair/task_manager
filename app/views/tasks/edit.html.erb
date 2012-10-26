@@ -3,8 +3,4 @@
 <%= render 'form_edit' %>
 
 <%= link_to 'Show', @task %> |
-<% if @task.category == nil %>
-	<%= link_to 'Back', tasks_path %>
-<% else %>
-	<%= link_to "Back", @task.category %>
-<% end %>
+<%= render 'back_links' %>

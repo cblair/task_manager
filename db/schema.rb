@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121025041517) do
+ActiveRecord::Schema.define(:version => 20121108050124) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -70,6 +70,8 @@ ActiveRecord::Schema.define(:version => 20121025041517) do
     t.integer  "task_category_id"
     t.integer  "category_id"
     t.integer  "milestone_id"
+    t.boolean  "completed"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

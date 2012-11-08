@@ -32,6 +32,7 @@
 	
 	<table class="table">
 		<th>Progress</th>
+		<th>Status</th>
 	    <th><%= link_to "Name", :sort_by => "name"%></th>
 	    <th><%= link_to "Task desc", :sort_by => "task_desc"%></th>
 	    <th>Est hour</th>
@@ -67,10 +68,17 @@
 	  		progress = 0
 	  	end
 	  %>
-		<tr>
-			<td class="progress">
-	        	<div class="bar" style="width: <%= progress %>%;"></div>
-	    	</td>
+	  <tr>
+		<td class="progress">
+        	<div class="bar" style="width: <%= progress %>%;"></div>
+    	</td>
+	   	<td>
+    		<% if task.completed %>
+    			<span class="label label-success">Complete</span>
+    		<% else %>
+    			<span class="label label-important">Incomplete</span>
+    		<% end %>
+    	</td>
 	   	<td><%= task.name %></td>
 	    <td><%= task.task_desc %></td>
 	    <td><%= task.est_hour %></td>

@@ -40,5 +40,14 @@
   <%= @task.milestone.name %>
 </p>
 
+<p>
+	<b>Completed:</b>
+	<%= @task.completed %>
+</p>
+
+<p>
+	<b>Owner:</b> <%= @user_email %>
+</p>
+
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= render 'back_links' %>

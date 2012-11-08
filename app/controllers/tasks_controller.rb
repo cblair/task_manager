@@ -20,6 +20,11 @@ class TasksController < ApplicationController
   def show
     @task = Task.find(params[:id])
 
+    @user_email = ""
+    if @task.user
+      @user_email = @task.user.email
+    end
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @task }
@@ -49,12 +54,18 @@ class TasksController < ApplicationController
   # GET /tasks/1/edit
   def edit
     @task = Task.find(params[:id])
+    
+    @user_email = ""
+    if @task.user
+      @user_email = @task.user.email
+    end
   end
 
   # POST /tasks
   # POST /tasks.json
   def create
     @task = Task.new(params[:task])
+    @task.user = current_user
 
     respond_to do |format|
       if @task.save

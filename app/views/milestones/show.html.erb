@@ -20,6 +20,15 @@
   <%= @milestone_total_act_hours %> / <%= @milestone_total_est_hours %>
 </p>
 
+<p>
+  <b>Completed:</b>
+  <% if @milestone_completed %>
+	<span class="label label-success">Complete</span>
+  <% else %>
+	<span class="label label-important">Incomplete</span>
+  <% end %>
+</p>
+
 <div class="progress">
 	<div class="bar" style="width: <%= @milestone_progress %>%;"></div>
 </div>
@@ -27,6 +36,7 @@
 <h4>Tasks</h4>
 	<table class="table">
 		<th>Progress</th>
+		<th>Status</th>
 	    <th><%= link_to "Name", :sort_by => "name"%></th>
 	    <th><%= link_to "Task desc", :sort_by => "task_desc"%></th>
 	    <th>Est hour</th>
@@ -65,6 +75,13 @@
 		<tr>
 		<td class="progress">
         	<div class="bar" style="width: <%= progress %>%;"></div>
+    	</td>
+    	<td>
+    		<% if task.completed %>
+    			<span class="label label-success">Complete</span>
+    		<% else %>
+    			<span class="label label-important">Incomplete</span>
+    		<% end %>
     	</td>
 	   	<td><%= task.name %></td>
 	    <td><%= task.task_desc %></td>

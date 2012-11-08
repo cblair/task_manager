@@ -56,6 +56,14 @@
 				{:selected => @task.milestone_id} )
   %>
   </div>
+  <div>
+  	Completed: <%= f.check_box :completed, {:checked => @task.completed} %>
+  </div>
+  <br />
+  <div>
+  	Owner: <%= @user_email %>
+  </div>
+  <br />
   <div class="actions">
     <%= f.submit %>
   </div>

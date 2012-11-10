@@ -1,4 +1,6 @@
 class MilestonesController < ApplicationController
+  include MilestonesHelper
+  
   # GET /milestones
   # GET /milestones.json
   def index
@@ -17,10 +19,7 @@ class MilestonesController < ApplicationController
     
     milestone_total_act_minutes = 0
     milestone_total_est_minutes = 0
-    @milestone_completed = true #until proven false
-    @milestone.tasks.each do |task|
-      @milestone_completed = @milestone_completed & task.completed
-      
+    @milestone.tasks.each do |task|      
       begin
         total_est_minute = (task.est_hour * 60) + task.est_minute 
         milestone_total_est_minutes += total_est_minute

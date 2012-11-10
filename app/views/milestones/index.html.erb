@@ -5,6 +5,7 @@
     <th>Name</th>
     <th>Milestone desc</th>
     <th>Due date</th>
+    <th>Status</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,8 @@
     <td><%= milestone.name %></td>
     <td><%= milestone.milestone_desc %></td>
     <td><%= milestone.due_date %></td>
+    <td><%= render :partial => 'milestone_completed', 
+    		:locals => {:milestone => milestone} %></td>
     <td><%= link_to 'Show', milestone %></td>
     <td><%= link_to 'Edit', edit_milestone_path(milestone) %></td>
     <td><%= link_to 'Destroy', milestone, confirm: 'Are you sure?', method: :delete %></td>

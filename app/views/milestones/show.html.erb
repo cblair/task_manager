@@ -22,11 +22,7 @@
 
 <p>
   <b>Completed:</b>
-  <% if @milestone_completed %>
-	<span class="label label-success">Complete</span>
-  <% else %>
-	<span class="label label-important">Incomplete</span>
-  <% end %>
+  <%= render :partial => 'milestone_completed', :locals => {:milestone => @milestone} %>
 </p>
 
 <div class="progress">

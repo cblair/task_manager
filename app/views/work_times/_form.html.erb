@@ -1,0 +1,36 @@
+<%= form_for(@work_time) do |f| %>
+  <% if @work_time.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@work_time.errors.count, "error") %> prohibited this work_time from being saved:</h2>
+
+      <ul>
+      <% @work_time.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.datetime_select :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :task_id %><br />
+	<%= 
+	 if params.include?('task_id')
+	 	f.select(:task_id, Task.all.collect {|t| [ t.name, t.id ] }, 
+	 				{:selected => params[:task_id]} )
+	 else
+	 	f.select(:task_id, Milestone.all.collect {|t| [ t.name, t.id ] } )
+	 end
+	 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

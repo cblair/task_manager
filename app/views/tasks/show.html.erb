@@ -1,3 +1,13 @@
+<!--Override the controller name to WorkTime - we want live scaffold js for it
+	instead.
+-->
+<script>
+  	//for live_scaffold.js.erb
+	var CONTROLLER_NAME = "work_times";
+	var CONTROLLER_WHERE = "task_id=<%= @task.id %>";
+</script>
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -48,6 +58,25 @@
 <p>
 	<b>Owner:</b> <%= @user_email %>
 </p>
+
+<h2>Work Times</h2>
+<div class="scaffold">
+	<table class="table">
+		
+	</table>
+</div>
+
+<% work_time_new = WorkTime.new %>
+
+<%= link_to "Start time", "#", 	{:class => "btn btn-success start-time"} %>
+<%= form_for(work_time_new) do |f| %>
+	<%= f.hidden_field :start_time, {:value => Time.now} %>
+	<%= f.hidden_field :end_time, {:value => Time.now} %>
+	<%= f.hidden_field :task_id, {:value => @task.id} %>
+	<%= submit_tag "Stop time", {:class => "btn btn-danger end-time"} %>
+<% end %>
+
+<br /> <br />
 
 <%= link_to 'Edit', edit_task_path(@task) %> |
 <%= render 'back_links' %>

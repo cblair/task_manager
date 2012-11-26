@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require work_times
 //= require_tree .
 
 // Loads all Bootstrap javascripts

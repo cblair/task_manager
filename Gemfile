@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.1'
+gem 'rake', '10.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -43,6 +44,8 @@ if RUBY_PLATFORM == 'x86_64-darwin11.3.0'
   #gem 'ruby-debug19', :require => false
   #gem 'ruby-debug-base19', :git => 'https://github.com/tribune/ruby-debug-base19.git', :require => false
   #gem 'linecache19', :git => 'git@github.com:chuckg/linecache19.git', :branch => "0_5_13/dependencies", :require => false
+  
+  gem 'debugger'
 else
   #Ubuntu 11.10 likes this. ?
   #gem 'ruby-debug', :platforms => :ruby_18

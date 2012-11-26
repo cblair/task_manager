@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start_time: 2012-11-20 18:36:25
+  endtime: 2012-11-20 18:36:25
+  task_id: 1
+
+two:
+  start_time: 2012-11-20 18:36:25
+  endtime: 2012-11-20 18:36:25
+  task_id: 1

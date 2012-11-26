@@ -1,0 +1,97 @@
+var SCAFFOLD_RESULTS = [];
+var BLACKLIST_KEYS = ["created_at", "id", "updated_at"];
+
+//Comes from app/views/layouts/application.html.erb
+// CONTROLLER_NAME - comes from app/views/layouts/application.html.erb
+// CONTROLLER_WHERE - optional; if set, should be set to 'column_name=value'
+
+
+function getScaffoldTableText(result)
+{	
+	var text = "<table class=\"table\">";
+	
+	for(var key in result[0]) {
+		//don't display certain keys
+		if(BLACKLIST_KEYS.indexOf(key) == -1) {
+			text += "<td>";
+			text += "<b>" + key + "</b>";
+			text += "</td>\n";
+		}
+	}
+	
+	for( var i in result)
+	{
+		text += "\t<tr>\n";
+		var dict = result[i];
+		
+		for(var key in dict) {
+			//don't display certain keys
+			if(BLACKLIST_KEYS.indexOf(key) == -1) {
+				text += "<td>";
+				text += dict[key];
+				text += "</td>\n";
+			}
+		}
+		
+		text += "<td>";
+		text += '<a href="/' + CONTROLLER_NAME + '/' + dict['id'] + '">Show</a> ';
+		text += '<a href="/' + CONTROLLER_NAME + '/' + dict['id'] + '/edit">Edit</a> ';
+		text += '<a href="/' + CONTROLLER_NAME + '/' + dict['id'] + '" class="scaffold-delete">Destroy</a>';
+		text += "</td>";
+		text += "\t</tr>\n";
+	}
+	text += "</table>\n";
+	
+	return text;
+}
+
+
+function updateScaffold() {
+	var url_str = '/' + CONTROLLER_NAME + '.json';
+	
+	if(typeof(CONTROLLER_WHERE) != "undefined") {
+		url_str += '?' + CONTROLLER_WHERE;
+	}
+	
+	$.ajax(url_str, {
+		//data: { data : "div.uploads" },
+		cache: false,
+		beforeSend: function(result) {
+			//$('div.scaffold table').hide();
+		},
+		success: function(result) {
+			//$('div.scaffold table').after('<p>test</p>');
+			if(result != SCAFFOLD_RESULTS) {
+				SCAFFOLD_RESULTS = result;
+				text = getScaffoldTableText(result);
+				
+				$('div.scaffold table').remove();
+				$('div.scaffold').append(text);
+			}	
+			setTimeout(updateScaffold, 2000);
+		},
+		error: function(result) {
+			$('#error').show();
+		}
+	});
+}
+
+
+function destroyScaffold(e) {
+	e.preventDefault();
+	
+	$.post(this.href, {_method:'delete'}, null, "script");
+	
+	return(false);
+}
+
+
+jQuery(function($) {
+	$('div.scaffold table').remove();
+	updateScaffold();
+	
+	//new binding to destroy
+	$('a.scaffold-delete').live("click", destroyScaffold);
+	
+	//setTimeout(updateScaffold, 2000);
+});

@@ -1,4 +1,6 @@
 TaskManager::Application.routes.draw do
+  resources :work_times
+
   resources :milestones
 
   resources :categories

@@ -1,0 +1,48 @@
+//This script updates WorkTime records dynamically
+
+jQuery.ajaxSetup({ 
+	'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+})
+
+
+jQuery.fn.submitWithAjax = function() {
+	this.submit(function() {
+		$.post(this.action, $(this).serialize(), null, "script");
+	return false;
+	})
+
+	return this;
+};
+
+
+function createAndStartNewWorkTime(e) {
+	e.preventDefault();
+	
+	//update the start time
+	$('input#work_time_start_time').val("<%= Time.now %>");
+	
+	$('a.start-time').hide();
+	$('input.end-time').show();
+}
+
+
+function endWorkTime(e) {
+	//e.preventDefault();
+	
+	//update the end time
+	$('input#work_time_end_time').val("<%= Time.now %>");
+	
+	$('input.end-time').hide();
+	$('a.start-time').show();
+}
+
+
+jQuery(function($) {
+	$("#new_work_time").submitWithAjax();
+		
+	$('input.end-time').hide();
+	
+	$('a.start-time').live("click", createAndStartNewWorkTime);
+	
+	$('input.end-time').live("click", endWorkTime);
+});

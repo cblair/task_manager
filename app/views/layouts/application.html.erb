@@ -8,7 +8,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
-<script src="../js/bsa.js"></script>
+
+<!--TODO: where should this be looking?
+	<script src="../js/bsa.js"></script>
+-->
+
+<script>
+  	//for live_scaffold.js.erb
+	var CONTROLLER_NAME = "<%= params[:controller] %>";
+</script>
 
 <header class="jumbotron subhead" id="overview">
   <div class="row">

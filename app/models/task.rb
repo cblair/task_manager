@@ -5,4 +5,5 @@ class Task < ActiveRecord::Base
   belongs_to :category
   belongs_to :milestone
   belongs_to :user
+  has_many :work_times
 end

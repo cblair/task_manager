@@ -1,4 +1,7 @@
 TaskManager::Application.routes.draw do
+  
+  match 'work_times/get_current_datetime' => 'work_times#get_current_datetime'
+  
   resources :work_times
 
   resources :milestones

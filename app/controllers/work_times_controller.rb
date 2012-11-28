@@ -2,7 +2,7 @@ class WorkTimesController < ApplicationController
   # GET /work_times
   # GET /work_times.json
   def index
-    @work_times = WorkTime.all
+    @work_times = WorkTime.find(:all, :order => "id")
 
     if params.include?("task_id")
       @work_times = WorkTime.where(:task_id => params[:task_id])
@@ -45,6 +45,10 @@ class WorkTimesController < ApplicationController
   # POST /work_times.json
   def create
     @work_time = WorkTime.new(params[:work_time])
+    
+    #have to update here, since jquery form updates don't happend before submit
+    # request
+    @work_time.end_time = DateTime.now
 
     respond_to do |format|
       if @work_time.save
@@ -84,6 +88,12 @@ class WorkTimesController < ApplicationController
       format.html { redirect_to work_times_url }
       format.json { head :no_content }
       format.js
+    end
+  end
+  
+  def get_current_datetime
+    respond_to do |format|
+      format.json { render :json => DateTime.now }
     end
   end
 end

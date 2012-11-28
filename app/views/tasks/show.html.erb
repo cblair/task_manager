@@ -70,8 +70,9 @@
 
 <%= link_to "Start time", "#", 	{:class => "btn btn-success start-time"} %>
 <%= form_for(work_time_new) do |f| %>
+	<!--<%= csrf_meta_tag %>-->
 	<%= f.hidden_field :start_time, {:value => Time.now} %>
-	<%= f.hidden_field :end_time, {:value => Time.now} %>
+	<!--<%= f.hidden_field :end_time, {:value => Time.now} %>-->
 	<%= f.hidden_field :task_id, {:value => @task.id} %>
 	<%= submit_tag "Stop time", {:class => "btn btn-danger end-time"} %>
 <% end %>

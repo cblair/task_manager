@@ -6,6 +6,14 @@ var BLACKLIST_KEYS = ["created_at", "id", "updated_at"];
 // CONTROLLER_WHERE - optional; if set, should be set to 'column_name=value'
 
 
+jQuery.ajaxSetup({ 
+	'beforeSend': function(xhr) {
+					xhr.setRequestHeader("Accept", "text/javascript");
+					xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+					}
+})
+
+
 function getScaffoldTableText(result)
 {	
 	var text = "<table class=\"table\">";
@@ -80,8 +88,18 @@ function updateScaffold() {
 function destroyScaffold(e) {
 	e.preventDefault();
 	
-	$.post(this.href, {_method:'delete'}, null, "script");
-	
+	//$.post(this.href, {_method:'delete'}, null, "script");
+	$.ajax({
+		type: 'POST',
+		beforeSend: function(xhr){
+        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
+    	},
+		url: this.href,
+		data: {_method:'delete'},
+		success: null,
+		dataType: "script"
+	});
+		
 	return(false);
 }
 

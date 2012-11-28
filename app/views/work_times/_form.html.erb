@@ -26,7 +26,7 @@
 	 	f.select(:task_id, Task.all.collect {|t| [ t.name, t.id ] }, 
 	 				{:selected => params[:task_id]} )
 	 else
-	 	f.select(:task_id, Milestone.all.collect {|t| [ t.name, t.id ] } )
+	 	f.select(:task_id, Task.all.collect {|t| [ t.name, t.id ] } )
 	 end
 	 %>
   </div>

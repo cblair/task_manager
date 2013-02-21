@@ -15,8 +15,7 @@
 //= require work_times
 //= require_tree .
 
-// Loads all Bootstrap javascripts
-//= require bootstrap
+//= require twitter/bootstrap
 
 //Hides stuff we don't want to see
 //$(document).ready(function(){

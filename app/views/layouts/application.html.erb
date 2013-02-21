@@ -3,11 +3,10 @@
 <head>
   <title>TaskManager</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= javascript_include_tag 'jquery' %>
   <%= csrf_meta_tags %>
 </head>
-<body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
+<body>
 
 <!--TODO: where should this be looking?
 	<script src="../js/bsa.js"></script>
@@ -18,62 +17,63 @@
 	var CONTROLLER_NAME = "<%= params[:controller] %>";
 </script>
 
-<header class="jumbotron subhead" id="overview">
-  <div class="row">
-    <div class="span6">
-      <h1>TaskManager</h1>
-      <p class="lead">A project management process tracker.</p>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <%= link_to "Task Manager", root_path, {:class => "brand", :style => "color: #ffffff"} %>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Categories", categories_path %></li>
+          <li><%= link_to "Specifications", specifications_path %></li>
+          <li><%= link_to "Requirements", requirements_path %></li>
+          <li><%= link_to "Milestones", milestones_path %></li>
+          <li><%= link_to "Tasks", tasks_path %></li>
+        </ul>
+      <ul class="nav pull-right">
+        <%= render 'layouts/registration_items' %>
+        <li class="divider-vertical"></li>
+        <%= render 'layouts/login_items' %>
+      </ul>
+      </div><!--/.nav-collapse -->
     </div>
   </div>
-</header>
-<div class="navbar">
-	<div class="navbar-inner">
-	  <div class="container" style="width: auto;">
-	    <div class="nav">
-          <ul class="nav">
-		      <li><%= link_to "Home", root_path %></li>
-		      <li><%= link_to "Categories", categories_path %></li>
-		      <li><%= link_to "Specifications", specifications_path %></li>
-		      <li><%= link_to "Requirements", requirements_path %></li>
-		      <li><%= link_to "Milestones", milestones_path %></li>
-		      <li><%= link_to "Tasks", tasks_path %></li>
-		  </ul>
-		  <ul class="nav pull-right">
-		  	<%= render 'layouts/registration_items' %>
-		  	<li class="divider-vertical"></li>
-		  	<%= render 'layouts/login_items' %>
-		  </ul>
-        </div><!-- /.nav-collapse -->
-      </div>
-    </div><!-- /navbar-inner -->
-  </div><!-- /navbar -->
 </div>
 
-<div class="container well" style="background-color: #dfdfdf;">
-    <% if notice || alert %>
-        <%= javascript_include_tag "bootstrap-alert" %>
-    <% end %>
-    <% if notice %>
-    <div id="notice" class="alert alert-info"">
-        <a class="close" data-dismiss="alert" href="#">&times;</a>
-        <%= notice %>
-    </div>
-    <% end %>
-    <% if alert %>
-    <div id="alert" class="alert">
-        <a class="close" data-dismiss="alert" href="#">&times;</a>
-        <%= alert %>
-    </div>
-    <% end %>
 
-	<div class="well" style="background-color: #f5f5f5;">
-	<% public_controllers = ["homes", "sessions", "registrations", "users", "passwords"] %>
-	<% if user_signed_in? or public_controllers.include?(controller.controller_name) %>
-		<%= yield %>
-	<% else %>
-		<%= link_to "Sign in", new_user_session_path %>
-	<% end %>
-	</div>
+<div class="container-fluid well" style="background-color: #dfdfdf;">
+    <div class="container-fluid well" style="background-color: #f5f5f5;">
+      <% if notice || alert %>
+          <%= javascript_include_tag "bootstrap-alert" %>
+      <% end %>
+      <% if notice %>
+      <div id="notice" class="alert alert-info">
+          <a class="close" data-dismiss="alert" href="#">&times;</a>
+          <%= notice %>
+      </div>
+      <% end %>
+      <% if alert %>
+      <div id="alert" class="alert">
+          <a class="close" data-dismiss="alert" href="#">&times;</a>
+          <%= alert %>
+      </div>
+      <% end %>
+
+      <div class="hero-unit">
+      	<% public_controllers = ["homes", "sessions", "registrations", "users", "passwords"] %>
+      	<% if user_signed_in? or public_controllers.include?(controller.controller_name) %>
+      		<%= yield %>
+      	<% else %>
+      		<%= link_to "Sign in", new_user_session_path %>
+      	<% end %>
+    	</div>
+  </div>
 </div>
 
 </body>

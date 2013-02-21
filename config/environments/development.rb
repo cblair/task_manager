@@ -35,6 +35,19 @@ TaskManager::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   
-  #Default url stuff
+  # localhost is default dev url
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.default_charset = "utf-8"
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+       :authentication => :plain,
+       :address => "smtp.mailgun.org",
+       :port => 587,
+       :domain => "app7511713.mailgun.org",
+       :user_name => "postmaster@app7511713.mailgun.org",
+       :password => "1jcijvv1dim9"
+  }  
 end

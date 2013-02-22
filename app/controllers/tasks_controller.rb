@@ -111,10 +111,11 @@ class TasksController < ApplicationController
       (params["task"][:act_hour].to_i + params[:add_hour].to_i + carry_hours).to_s
 
     #let's tell the assigned user about this task
-    if @task.assigned_user_id != params[:task][:assigned_user_id]
+    if @task.assigned_user_id != params[:task][:assigned_user_id].to_i
       UserMailer.add_user_to_task(User.find(params[:task][:assigned_user_id]),@task).deliver
+      @task.assigned_user_id = params[:task][:assigned_user_id].to_i
     end
-
+    
     respond_to do |format|
       if @task.update_attributes(params[:task])
         format.html { redirect_to @task, notice: 'Task was successfully updated.' }

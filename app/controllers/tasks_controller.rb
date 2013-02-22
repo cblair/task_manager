@@ -25,6 +25,11 @@ class TasksController < ApplicationController
       @user_email = @task.user.email
     end
 
+    @assigned_user_email = ""
+    if @task.assigned_user_id != nil
+      @assigned_user_email = User.find(@task.assigned_user_id).email
+    end
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @task }
@@ -65,7 +70,10 @@ class TasksController < ApplicationController
   # POST /tasks.json
   def create
     @task = Task.new(params[:task])
-    @task.user = current_user
+    @task.user = current_user #owner
+
+    #let's tell the assigned user about this task
+    UserMailer.add_user_to_task(User.find(params[:task][:assigned_user_id]),@task).deliver
 
     respond_to do |format|
       if @task.save
@@ -100,7 +108,12 @@ class TasksController < ApplicationController
     params["task"][:act_minute] = minutes.remainder(60)
     
     params["task"][:act_hour] = 
-      (params["task"][:act_hour].to_i + params[:add_hour].to_i + carry_hours).to_s  
+      (params["task"][:act_hour].to_i + params[:add_hour].to_i + carry_hours).to_s
+
+    #let's tell the assigned user about this task
+    if @task.assigned_user_id != params[:task][:assigned_user_id]
+      UserMailer.add_user_to_task(User.find(params[:task][:assigned_user_id]),@task).deliver
+    end
 
     respond_to do |format|
       if @task.update_attributes(params[:task])

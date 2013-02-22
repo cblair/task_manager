@@ -34,7 +34,6 @@
 		<th>Progress</th>
 		<th>Status</th>
 	    <th><%= link_to "Name", :sort_by => "name"%></th>
-	    <th><%= link_to "Task desc", :sort_by => "task_desc"%></th>
 	    <th>Est hour</th>
 	    <th>Est minute</th>
 	    <th>Act hour</th>
@@ -81,7 +80,6 @@
     		<% end %>
     	</td>
 	   	<td><%= task.name %></td>
-	    <td><%= task.task_desc %></td>
 	    <td><%= task.est_hour %></td>
 	    <td><%= task.est_minute %></td>
 	    <td><%= get_task_total_act_minutes(task) / 60 %></td>

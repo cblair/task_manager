@@ -1,9 +1,8 @@
 <h1>Listing milestones</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Name</th>
-    <th>Milestone desc</th>
     <th>Due date</th>
     <th>Status</th>
     <th></th>
@@ -14,7 +13,6 @@
 <% @milestones.each do |milestone| %>
   <tr>
     <td><%= milestone.name %></td>
-    <td><%= milestone.milestone_desc %></td>
     <td><%= milestone.due_date %></td>
     <td><%= render :partial => 'milestone_completed', 
     		:locals => {:milestone => milestone} %></td>

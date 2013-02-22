@@ -109,7 +109,7 @@ jQuery(function($) {
 	updateScaffold();
 	
 	//new binding to destroy
-	$('a.scaffold-delete').live("click", destroyScaffold);
+	$('a.scaffold-delete').on("click", destroyScaffold);
 	
 	//setTimeout(updateScaffold, 2000);
 });

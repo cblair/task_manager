@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121121030503) do
+ActiveRecord::Schema.define(:version => 20130221041255) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(:version => 20121121030503) do
     t.integer  "milestone_id"
     t.boolean  "completed"
     t.integer  "user_id"
+    t.integer  "assigned_user_id"
   end
 
   create_table "users", :force => true do |t|

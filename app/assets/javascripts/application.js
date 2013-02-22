@@ -12,10 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require work_times
-//= require_tree .
+//= require jquery-ui
 
 //= require twitter/bootstrap
+
+//= require_tree .
 
 //Hides stuff we don't want to see
 //$(document).ready(function(){

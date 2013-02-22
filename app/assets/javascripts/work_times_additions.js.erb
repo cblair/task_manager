@@ -59,12 +59,14 @@ function endWorkTime(e) {
 
 
 jQuery(function($) {
-	$("#new_work_time").submitWithAjax();
+	$(document).ready(function () {
+		$("#new_work_time").submitWithAjax();
+			
+		$('input.end-time').hide();
 		
-	$('input.end-time').hide();
-	
-	$('a.start-time').live("click", createAndStartNewWorkTime);
-	
-	//Called in submit request
-	$('input.end-time').live("click", endWorkTime);
+		$('a.start-time').on("click", createAndStartNewWorkTime);
+		
+		//Called in submit request
+		$('input.end-time').on("click", endWorkTime);
+	});
 });

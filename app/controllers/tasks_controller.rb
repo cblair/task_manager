@@ -72,11 +72,11 @@ class TasksController < ApplicationController
     @task = Task.new(params[:task])
     @task.user = current_user #owner
 
-    #let's tell the assigned user about this task
-    UserMailer.add_user_to_task(User.find(params[:task][:assigned_user_id]),@task).deliver
-
     respond_to do |format|
       if @task.save
+        #let's tell the assigned user about this task
+        UserMailer.add_user_to_task(User.find(params[:task][:assigned_user_id]),@task).deliver
+
         format.html { redirect_to @task, notice: 'Task was successfully created.' }
         format.json { render json: @task, status: :created, location: @task }
       else
